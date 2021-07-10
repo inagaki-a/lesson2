@@ -1,0 +1,20 @@
+{% extends 'templates/base.html' %}
+
+
+{% block title %}
+果物削除
+{% endblock title %}
+
+{% block header %}
+果物削除
+{% endblock header %}
+
+{% block content %}
+  <form action="" method="post" name="fruits_create">
+    {% csrf_token %}
+    <p>№: {{ fruits.id }}</P>
+    <p>果物名: {{ fruits.name }}</P>
+    <p>メモ: {{ fruits.memo }}</P>
+    <button type="submit" class="btn btn-outline-danger">削除</button>
+  </form>
+{% endblock content %}
